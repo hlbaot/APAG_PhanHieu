@@ -1,4 +1,4 @@
-import TinHoatDongPage from "@/pages/tin-tuc/tin-hoat-dong";
+import TinHoatDongPage from "@/views/tin-tuc/tin-hoat-dong";
 
 export default function Page() {
   return <TinHoatDongPage />;

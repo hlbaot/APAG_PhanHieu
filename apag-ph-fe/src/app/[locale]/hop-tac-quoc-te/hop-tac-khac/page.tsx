@@ -1,4 +1,4 @@
-import HopTacKhacPage from "@/pages/hop-tac-quoc-te/hop-tac-khac";
+import HopTacKhacPage from "@/views/hop-tac-quoc-te/hop-tac-khac";
 
 export default function Page() {
   return <HopTacKhacPage />;

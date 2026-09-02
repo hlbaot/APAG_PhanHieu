@@ -1,4 +1,4 @@
-import TrangChuPage from "@/pages/trang-chu";
+import TrangChuPage from "@/views/trang-chu";
 
 export default function Page() {
   return <TrangChuPage />;
