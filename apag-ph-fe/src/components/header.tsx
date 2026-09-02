@@ -173,14 +173,15 @@ export default function Header() {
 
   return (
     <header className="w-full bg-white border-b border-gray-200 shadow-sm relative z-30">
-      {/* ── Desktop nav ── */}
+      {/* ── Desktop nav (xl and up: spacious screen) ── */}
       <nav
-        className="hidden lg:flex items-stretch justify-center relative"
+        className="hidden xl:flex items-stretch justify-center relative w-full max-w-7xl mx-auto px-4"
         aria-label="Main navigation"
       >
-        {navItems.map((item) => {
+        {navItems.map((item, index) => {
           const active = isItemActive(item);
           const hasChildren = Boolean(item.children && item.children.length > 0);
+          const isRightAlignedDropdown = index >= 5;
 
           return (
             <div key={item.key} className="relative group flex items-stretch">
@@ -188,10 +189,10 @@ export default function Header() {
                 // Parent item with dropdown: NOT clickable, cursor-default
                 <div
                   className={[
-                    "flex items-center justify-center text-center px-3.5 xl:px-4 py-3.5",
-                    "text-xs xl:text-sm font-extrabold uppercase tracking-wider leading-tight",
+                    "flex items-center justify-center text-center px-3 2xl:px-4 py-3.5",
+                    "text-xs 2xl:text-sm font-extrabold uppercase tracking-tight 2xl:tracking-wider leading-tight",
                     "transition-colors duration-150 border-b-2 cursor-default select-none",
-                    "min-h-[54px] whitespace-pre-line",
+                    "min-h-[52px] whitespace-nowrap",
                     active
                       ? "text-[#DA251C] border-[#DA251C]"
                       : "text-[#1E2A5E] border-transparent group-hover:text-[#DA251C] group-hover:border-[#DA251C]",
@@ -210,10 +211,10 @@ export default function Header() {
                 <Link
                   href={item.href!}
                   className={[
-                    "flex items-center justify-center text-center px-3.5 xl:px-4 py-3.5",
-                    "text-xs xl:text-sm font-extrabold uppercase tracking-wider leading-tight",
-                    "transition-colors duration-150 border-b-2 cursor-pointer",
-                    "min-h-[54px] whitespace-pre-line",
+                    "flex items-center justify-center text-center px-3 2xl:px-4 py-3.5",
+                    "text-xs 2xl:text-sm font-extrabold uppercase tracking-tight 2xl:tracking-wider leading-tight",
+                    "transition-colors duration-150 border-b-2 cursor-pointer select-none",
+                    "min-h-[52px] whitespace-nowrap",
                     active
                       ? "text-[#DA251C] border-[#DA251C]"
                       : "text-[#1E2A5E] border-transparent hover:text-[#DA251C] hover:border-[#DA251C]",
@@ -229,9 +230,14 @@ export default function Header() {
                 </Link>
               )}
 
-              {/* Desktop Dropdown Menu (only clickable items) */}
+              {/* Desktop Dropdown Menu */}
               {hasChildren && (
-                <div className="absolute left-0 top-full hidden group-hover:block w-72 xl:w-80 bg-white shadow-xl border border-gray-200 py-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150">
+                <div
+                  className={[
+                    "absolute top-full hidden group-hover:block w-72 2xl:w-80 bg-white shadow-xl border border-gray-200 py-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150",
+                    isRightAlignedDropdown ? "right-0" : "left-0",
+                  ].join(" ")}
+                >
                   <div className="flex flex-col">
                     {item.children!.map((sub) => {
                       const isSubActive = pathname === sub.href;
@@ -258,121 +264,42 @@ export default function Header() {
         })}
       </nav>
 
-      {/* ── Tablet nav (horizontal scroll) ── */}
-      <nav
-        className="hidden md:flex lg:hidden items-stretch overflow-x-auto scrollbar-hide"
-        aria-label="Main navigation"
-      >
-        {navItems.map((item) => {
-          const active = isItemActive(item);
-          const hasChildren = Boolean(item.children && item.children.length > 0);
-
-          return (
-            <div key={item.key} className="relative group flex items-stretch">
-              {hasChildren ? (
-                <div
-                  className={[
-                    "flex-shrink-0 flex items-center justify-center text-center px-4 py-3.5",
-                    "text-xs font-extrabold uppercase tracking-wide leading-tight",
-                    "transition-colors duration-150 border-b-2 whitespace-nowrap cursor-default select-none",
-                    "min-h-[50px]",
-                    active
-                      ? "text-[#DA251C] border-[#DA251C]"
-                      : "text-[#1E2A5E] border-transparent group-hover:text-[#DA251C] group-hover:border-[#DA251C]",
-                  ].join(" ")}
-                >
-                  {item.icon && (
-                    <span className={active ? "text-[#DA251C]" : ""}>
-                      {item.icon}
-                    </span>
-                  )}
-                  {t(item.key as Parameters<typeof t>[0])}
-                </div>
-              ) : (
-                <Link
-                  href={item.href!}
-                  className={[
-                    "flex-shrink-0 flex items-center justify-center text-center px-4 py-3.5",
-                    "text-xs font-extrabold uppercase tracking-wide leading-tight",
-                    "transition-colors duration-150 border-b-2 whitespace-nowrap cursor-pointer",
-                    "min-h-[50px]",
-                    active
-                      ? "text-[#DA251C] border-[#DA251C]"
-                      : "text-[#1E2A5E] border-transparent hover:text-[#DA251C] hover:border-[#DA251C]",
-                  ].join(" ")}
-                  aria-current={active ? "page" : undefined}
-                >
-                  {item.icon && (
-                    <span className={active ? "text-[#DA251C]" : ""}>
-                      {item.icon}
-                    </span>
-                  )}
-                  {t(item.key as Parameters<typeof t>[0])}
-                </Link>
-              )}
-
-              {/* Tablet dropdown on hover */}
-              {hasChildren && (
-                <div className="absolute left-0 top-full hidden group-hover:block w-72 bg-white shadow-xl border border-gray-200 py-2 z-50">
-                  <div className="flex flex-col">
-                    {item.children!.map((sub) => {
-                      const isSubActive = pathname === sub.href;
-                      return (
-                        <Link
-                          key={sub.href}
-                          href={sub.href}
-                          className={[
-                            "px-4 py-2.5 text-xs font-bold uppercase tracking-tight text-left transition-colors border-b border-gray-100 last:border-b-0 cursor-pointer whitespace-normal",
-                            isSubActive
-                              ? "text-[#DA251C] bg-red-50"
-                              : "text-[#1E2A5E] hover:text-[#DA251C] hover:bg-gray-50",
-                          ].join(" ")}
-                        >
-                          {sub.title}
-                        </Link>
-                      );
-                    })}
-                  </div>
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </nav>
-
-      {/* ── Mobile: hamburger bar ── */}
-      <div className="md:hidden flex items-center justify-between px-4 py-2.5 h-14">
+      {/* ── Narrow / Tablet / Mobile: Hamburger Bar (icon 3 gạch thay cho menu) ── */}
+      <div className="xl:hidden flex items-center justify-between px-4 sm:px-6 py-2.5 h-14">
         {/* Active page label */}
-        <span className="text-[#DA251C] text-sm font-extrabold uppercase tracking-wide">
+        <span className="text-[#DA251C] text-sm sm:text-base font-extrabold uppercase tracking-wide truncate whitespace-nowrap mr-3">
           {navItems.find((i) => isItemActive(i))
             ? t(navItems.find((i) => isItemActive(i))!.key as Parameters<typeof t>[0])
             : t("home")}
         </span>
 
-        {/* Hamburger toggle */}
+        {/* Hamburger toggle (Icon 3 gạch) */}
         <button
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Đóng menu" : "Mở menu"}
           aria-expanded={open}
           aria-controls="mobile-menu"
-          className="min-w-[44px] min-h-[44px] flex items-center justify-center
-                     text-[#1E2A5E] hover:text-[#DA251C] transition-colors cursor-pointer"
+          className="min-w-[44px] min-h-[44px] px-2 py-1 flex items-center justify-center gap-1.5 rounded
+                     text-[#1E2A5E] hover:text-[#DA251C] hover:bg-gray-50 transition-colors cursor-pointer flex-shrink-0"
         >
+          <span className="text-xs font-bold uppercase tracking-wider hidden sm:inline-block">
+            {open ? "ĐÓNG" : "MENU"}
+          </span>
           {open ? <CloseIcon /> : <HamburgerIcon />}
         </button>
       </div>
 
-      {/* ── Mobile drawer ── */}
+      {/* ── Narrow / Tablet / Mobile drawer ── */}
       <div
         id="mobile-menu"
         role="navigation"
         aria-label="Mobile navigation"
         className={[
-          "md:hidden overflow-y-auto max-h-[calc(100vh-180px)] transition-all duration-300 ease-in-out",
+          "xl:hidden overflow-y-auto max-h-[calc(100vh-180px)] transition-all duration-300 ease-in-out border-t border-gray-100",
           open ? "block" : "hidden",
         ].join(" ")}
       >
-        <nav className="flex flex-col border-t border-gray-100 bg-white">
+        <nav className="flex flex-col bg-white">
           {navItems.map((item) => {
             const active = isItemActive(item);
             const hasChildren = Boolean(item.children && item.children.length > 0);

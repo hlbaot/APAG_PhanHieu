@@ -1,4 +1,4 @@
-import DonViTrucThuocPage from "@/pages/gioi-thieu/don-vi-truc-thuoc";
+import DonViTrucThuocPage from "@/views/gioi-thieu/don-vi-truc-thuoc";
 
 export default function Page() {
   return <DonViTrucThuocPage />;

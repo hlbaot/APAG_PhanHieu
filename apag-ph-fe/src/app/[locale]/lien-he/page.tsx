@@ -1,4 +1,4 @@
-import LienHePage from "@/pages/lien-he";
+import LienHePage from "@/views/lien-he";
 
 export default function Page() {
   return <LienHePage />;
