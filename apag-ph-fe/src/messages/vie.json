@@ -1,0 +1,42 @@
+{
+  "Banner": {
+    "schoolNameVi": "HỌC VIỆN HÀNH CHÍNH VÀ QUẢN TRỊ CÔNG",
+    "schoolNameEn": "ACADEMY OF PUBLIC ADMINISTRATION AND GOVERNANCE",
+    "langSwitch": "TIẾNG VIỆT",
+    "searchLabel": "Tìm kiếm",
+    "loginLabel": "Đăng nhập"
+  },
+  "Nav": {
+    "home": "TRANG CHỦ",
+    "about": "GIỚI THIỆU",
+    "training": "ĐÀO TẠO, BỒI DƯỠNG",
+    "research": "NGHIÊN CỨU KHOA HỌC",
+    "international": "HỢP TÁC QUỐC TẾ",
+    "quality": "ĐẢM BẢO CHẤT LƯỢNG",
+    "library": "HỌC LIỆU",
+    "news": "TIN TỨC",
+    "contact": "LIÊN HỆ"
+  },
+  "HomePage": {
+    "title": "Học viện Hành chính và Quản trị công",
+    "description": "Chào mừng đến với APAG - Học viện Hành chính và Quản trị công"
+  },
+  "NotFound": {
+    "code": "404",
+    "badge": "Lỗi 404 • Không tìm thấy trang",
+    "title": "Trang bạn tìm kiếm không tồn tại",
+    "description": "Địa chỉ liên kết có thể đã bị thay đổi, bị xoá hoặc tạm thời không khả dụng. Quý vị vui lòng kiểm tra lại đường dẫn hoặc truy cập các mục bên dưới.",
+    "backHome": "Về trang chủ",
+    "goBack": "Quay lại",
+    "quickLinksTitle": "Lối tắt hữu ích",
+    "navHome": "Trang chủ",
+    "navAbout": "Giới thiệu",
+    "navTraining": "Đào tạo, Bồi dưỡng",
+    "navResearch": "Nghiên cứu khoa học",
+    "navNews": "Tin tức & Sự kiện",
+    "navContact": "Liên hệ",
+    "searchPlaceholder": "Tìm kiếm trên cổng thông tin...",
+    "searchBtn": "Tìm kiếm",
+    "supportText": "Cần hỗ trợ? Vui lòng liên hệ Văn phòng Học viện qua số điện thoại hoặc email chính thức."
+  }
+}

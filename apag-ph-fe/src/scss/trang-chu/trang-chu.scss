@@ -1,0 +1,44 @@
+// ============================================================
+// Trang Chủ — SCSS riêng của trang
+// Ưu tiên Tailwind. Chỉ dùng SCSS cho những gì Tailwind không làm được.
+// ============================================================
+
+// ── Hero banner: gradient overlay trên ảnh ───────────────────────
+// Tailwind có gradient-to-* nhưng không có multi-stop diagonal gradient
+// kết hợp rgba phức tạp cho overlay ảnh nền.
+.trang-chu-hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(196, 30, 42, 0.75) 0%,
+    rgba(30, 40, 120, 0.55) 60%,
+    transparent 100%
+  );
+}
+
+// ── News card: line-clamp nhiều dòng ─────────────────────────────
+// Tailwind 3.3+ có line-clamp-{n} nhưng Next.js có thể dùng phiên bản
+// cũ hơn. Đặt sẵn fallback SCSS.
+.trang-chu-card-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.trang-chu-card-excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// ── Scrollbar ẩn cho carousel ngang ──────────────────────────────
+// Tailwind không có utility ẩn scrollbar cross-browser.
+.trang-chu-scroll-hide {
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // IE/Edge
+
+  &::-webkit-scrollbar {
+    display: none; // Chrome/Safari
+  }
+}

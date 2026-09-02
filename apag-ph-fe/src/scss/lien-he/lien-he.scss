@@ -1,0 +1,33 @@
+// ============================================================
+// Liên hệ — SCSS riêng của trang
+// Ưu tiên Tailwind. Chỉ dùng SCSS cho những gì Tailwind không làm được.
+// ============================================================
+
+// ── Google Maps iframe: responsive aspect-ratio ──────────────────
+// Tailwind có aspect-ratio nhưng không có class cố định height dạng
+// clamp() kết hợp min/max — cần CSS thuần.
+.lien-he-map {
+  width: 100%;
+  height: clamp(340px, 50vh, 560px);
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  display: block;
+}
+
+// ── OTP countdown button: chữ đếm ngược dạng mono ───────────────
+// Tailwind không có font-variant-numeric: tabular-nums dạng utility
+// (chỉ có font-mono, nhưng không giữ width cố định cho số thay đổi).
+.otp-btn-countdown {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+
+// ── Textarea: custom resize handle màu brand ─────────────────────
+// Tailwind có resize-y nhưng không thể tô màu resize handle.
+.lien-he-textarea {
+  resize: vertical;
+
+  &::-webkit-resizer {
+    border-color: transparent #c41e2a #c41e2a transparent;
+  }
+}

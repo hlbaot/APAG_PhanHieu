@@ -1,0 +1,42 @@
+{
+  "Banner": {
+    "schoolNameVi": "HỌC VIỆN HÀNH CHÍNH VÀ QUẢN TRỊ CÔNG",
+    "schoolNameEn": "ACADEMY OF PUBLIC ADMINISTRATION AND GOVERNANCE",
+    "langSwitch": "ENGLISH",
+    "searchLabel": "Search",
+    "loginLabel": "Login"
+  },
+  "Nav": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "training": "TRAINING",
+    "research": "RESEARCH",
+    "international": "INTERNATIONAL",
+    "quality": "QUALITY ASSURANCE",
+    "library": "LIBRARY",
+    "news": "NEWS",
+    "contact": "CONTACT"
+  },
+  "HomePage": {
+    "title": "Academy of Public Administration and Governance",
+    "description": "Welcome to APAG - Academy of Public Administration and Governance"
+  },
+  "NotFound": {
+    "code": "404",
+    "badge": "Error 404 • Page Not Found",
+    "title": "The page you're looking for doesn't exist",
+    "description": "The link you followed may be broken, or the page may have been removed. Please check the URL or use the quick links below to navigate.",
+    "backHome": "Back to Home",
+    "goBack": "Go Back",
+    "quickLinksTitle": "Helpful Quick Links",
+    "navHome": "Home",
+    "navAbout": "About",
+    "navTraining": "Training & Education",
+    "navResearch": "Scientific Research",
+    "navNews": "News & Events",
+    "navContact": "Contact",
+    "searchPlaceholder": "Search portal content...",
+    "searchBtn": "Search",
+    "supportText": "Need assistance? Please contact the Academy administration via official hotline or email."
+  }
+}
