@@ -90,15 +90,10 @@ export default function Header() {
     {
       key: "about",
       children: [
-        { title: "BAN GIÁM ĐỐC HỌC VIỆN", href: "/gioi-thieu/ban-giam-doc-hoc-vien" },
+        { title: "BAN GIÁM ĐỐC PHÂN HIỆU", href: "/gioi-thieu/ban-giam-doc-phan-hieu" },
         { title: "GIỚI THIỆU CHUNG", href: "/gioi-thieu/gioi-thieu-chung" },
-        { title: "ĐƠN VỊ TRỰC THUỘC", href: "/gioi-thieu/don-vi-truc-thuoc" },
-        { title: "LÃNH ĐẠO HỌC VIỆN QUA CÁC THỜI KỲ", href: "/gioi-thieu/lanh-dao-hoc-vien-qua-cac-thoi-ky" },
+        { title: "ĐƠN VỊ THUỘC VÀ TRỰC THUỘC", href: "/gioi-thieu/don-vi-thuoc-va-truc-thuoc" },
         { title: "NHỮNG CHẶNG ĐƯỜNG PHÁT TRIỂN", href: "/gioi-thieu/nhung-chang-duong-phat-trien" },
-        { title: "NHỮNG PHẦN THƯỞNG VÀ DANH HIỆU CAO QUÝ", href: "/gioi-thieu/nhung-phan-thuong-va-danh-hieu-cao-quy" },
-        { title: "PHÁT BIỂU CỦA LÃNH ĐẠO ĐẢNG VÀ NHÀ NƯỚC VỚI HỌC VIỆN", href: "/gioi-thieu/phat-bieu-cua-lanh-dao-dang-va-nha-nuoc-voi-hoc-vien" },
-        { title: "PHÒNG TRUYỀN THỐNG SỐ", href: "/gioi-thieu/phong-truyen-thong-so" },
-        { title: "LOGO CHÍNH THỨC", href: "/gioi-thieu/logo-chinh-thuc" },
       ],
     },
     {
@@ -106,8 +101,7 @@ export default function Header() {
       children: [
         { title: "ĐÀO TẠO ĐẠI HỌC", href: "/dao-tao&boi-duong/dao-tao-dai-hoc" },
         { title: "ĐÀO TẠO THẠC SĨ", href: "/dao-tao&boi-duong/dao-tao-thac-si" },
-        { title: "ĐÀO TẠO TIẾN SĨ", href: "/dao-tao&boi-duong/dao-tao-tien-si" },
-        { title: "BA CÔNG KHAI", href: "/dao-tao&boi-duong/ba-cong-khai" },
+        { title: "ĐÀO TẠO BỒI DƯỠNG", href: "/dao-tao&boi-duong/dao-tao-boi-duong" },
       ],
     },
     {
@@ -142,14 +136,11 @@ export default function Header() {
     {
       key: "news",
       children: [
-        { title: "LỊCH CÔNG TÁC", href: "/tin-tuc/lich-cong-tac" },
+        { title: "TIN TỨC", href: "/tin-tuc/tin-tuc" },
         { title: "THÔNG BÁO", href: "/tin-tuc/thong-bao" },
-        { title: "TUYÊN TRUYỀN PHỔ BIẾN PHÁP LUẬT", href: "/tin-tuc/tuyen-truyen-pho-bien-phap-luat" },
-        { title: "TIN HOẠT ĐỘNG", href: "/tin-tuc/tin-hoat-dong" },
-        { title: "THÔNG TIN HÀNH CHÍNH", href: "/tin-tuc/thong-tin-hanh-chinh" },
-        { title: "GÓP Ý DỰ THẢO CÁC VĂN KIỆN ĐH XIV CỦA ĐẢNG", href: "/tin-tuc/gop-y-du-thao-cac-van-kien-dh-xiv-cua-dang" },
-        { title: "CÔNG KHAI TÀI CHÍNH", href: "/tin-tuc/cong-khai-tai-chinh" },
-        { title: "BẦU CỬ ĐẠI BIỂU QUỐC HỘI KHÓA XVI VÀ ĐẠI BIỂU HĐND CÁC CẤP NHIỆM KỲ 2026-2031", href: "/tin-tuc/bau-cu-dai-bieu-quoc-hoi-khoa-xvi-va-dai-bieu-hdnd-cac-cap-nhiem-ky-2026-2031" },
+        { title: "LỊCH CÔNG TÁC", href: "/tin-tuc/lich-cong-tac" },
+        { title: "THỜI KHÓA BIỂU", href: "/tin-tuc/thoi-khoa-bieu" },
+        { title: "TUYÊN TRUYỀN PHÁP LUẬT", href: "/tin-tuc/tuyen-truyen-phap-luat" },
       ],
     },
     {

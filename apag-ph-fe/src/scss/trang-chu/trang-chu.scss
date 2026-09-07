@@ -7,12 +7,10 @@
 // Tailwind có gradient-to-* nhưng không có multi-stop diagonal gradient
 // kết hợp rgba phức tạp cho overlay ảnh nền.
 .trang-chu-hero-overlay {
-  background: linear-gradient(
-    135deg,
-    rgba(196, 30, 42, 0.75) 0%,
-    rgba(30, 40, 120, 0.55) 60%,
-    transparent 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(196, 30, 42, 0.75) 0%,
+      rgba(30, 40, 120, 0.55) 60%,
+      transparent 100%);
 }
 
 // ── News card: line-clamp nhiều dòng ─────────────────────────────
@@ -40,5 +38,29 @@
 
   &::-webkit-scrollbar {
     display: none; // Chrome/Safari
+  }
+}
+
+// ── Custom scrollbar đỏ cho khối Tin hoạt động ───────────────────
+.custom-scrollbar-red {
+  scrollbar-width: thin;
+  scrollbar-color: #DA251C #f1f5f9;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 9999px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #DA251C;
+    border-radius: 9999px;
+
+    &:hover {
+      background: #9B0A11;
+    }
   }
 }

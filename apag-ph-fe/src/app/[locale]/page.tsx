@@ -1,5 +1,5 @@
-import Home from "@/views/home";
+import TrangChuPage from "@/views/trang-chu";
 
 export default function Page() {
-  return <Home />;
+  return <TrangChuPage />;
 }
