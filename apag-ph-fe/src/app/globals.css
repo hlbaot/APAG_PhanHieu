@@ -19,3 +19,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes newsTickerScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.news-ticker-track {
+  display: flex !important;
+  width: max-content !important;
+  flex-shrink: 0 !important;
+  will-change: transform;
+  animation: newsTickerScroll 35s linear infinite !important;
+}
+
+.news-ticker-track:hover {
+  animation-play-state: paused !important;
+}
+

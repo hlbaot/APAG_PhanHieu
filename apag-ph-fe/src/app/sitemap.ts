@@ -18,15 +18,10 @@ const staticRoutes: { path: string; priority: number; changeFrequency: MetadataR
 
   // Giới thiệu
   { path: "gioi-thieu",                                              priority: 0.9, changeFrequency: "monthly" },
+  { path: "gioi-thieu/ban-giam-doc-phan-hieu",                       priority: 0.8, changeFrequency: "monthly" },
   { path: "gioi-thieu/gioi-thieu-chung",                            priority: 0.8, changeFrequency: "monthly" },
-  { path: "gioi-thieu/ban-giam-doc-hoc-vien",                       priority: 0.8, changeFrequency: "monthly" },
-  { path: "gioi-thieu/don-vi-truc-thuoc",                           priority: 0.8, changeFrequency: "monthly" },
-  { path: "gioi-thieu/lanh-dao-hoc-vien-qua-cac-thoi-ky",          priority: 0.7, changeFrequency: "monthly" },
-  { path: "gioi-thieu/logo-chinh-thuc",                             priority: 0.6, changeFrequency: "yearly" },
+  { path: "gioi-thieu/don-vi-thuoc-va-truc-thuoc",                  priority: 0.8, changeFrequency: "monthly" },
   { path: "gioi-thieu/nhung-chang-duong-phat-trien",                priority: 0.7, changeFrequency: "monthly" },
-  { path: "gioi-thieu/nhung-phan-thuong-va-danh-hieu-cao-quy",      priority: 0.7, changeFrequency: "monthly" },
-  { path: "gioi-thieu/phat-bieu-cua-lanh-dao-dang-va-nha-nuoc-voi-hoc-vien", priority: 0.7, changeFrequency: "monthly" },
-  { path: "gioi-thieu/phong-truyen-thong-so",                       priority: 0.7, changeFrequency: "monthly" },
 
   // Tin tức
   { path: "tin-tuc",                                priority: 0.9, changeFrequency: "daily" },
@@ -40,11 +35,10 @@ const staticRoutes: { path: string; priority: number; changeFrequency: MetadataR
   { path: "tin-tuc/bau-cu-dai-bieu-quoc-hoi-khoa-xvi-va-dai-bieu-hdnd-cac-cap-nhiem-ky-2026-2031", priority: 0.6, changeFrequency: "monthly" },
 
   // Đào tạo & bồi dưỡng
-  { path: "dao-tao&boi-duong",                priority: 0.9, changeFrequency: "monthly" },
-  { path: "dao-tao&boi-duong/dao-tao-dai-hoc", priority: 0.8, changeFrequency: "monthly" },
-  { path: "dao-tao&boi-duong/dao-tao-thac-si", priority: 0.8, changeFrequency: "monthly" },
-  { path: "dao-tao&boi-duong/dao-tao-tien-si", priority: 0.8, changeFrequency: "monthly" },
-  { path: "dao-tao&boi-duong/ba-cong-khai",    priority: 0.7, changeFrequency: "monthly" },
+  { path: "dao-tao&boi-duong",                    priority: 0.9, changeFrequency: "monthly" },
+  { path: "dao-tao&boi-duong/dao-tao-dai-hoc",     priority: 0.8, changeFrequency: "monthly" },
+  { path: "dao-tao&boi-duong/dao-tao-thac-si",     priority: 0.8, changeFrequency: "monthly" },
+  { path: "dao-tao&boi-duong/dao-tao-boi-duong",   priority: 0.8, changeFrequency: "monthly" },
 
   // Nghiên cứu khoa học
   { path: "nghien-cuu-khoa-hoc", priority: 0.8, changeFrequency: "weekly" },

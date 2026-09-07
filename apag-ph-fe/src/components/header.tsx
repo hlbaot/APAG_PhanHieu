@@ -90,15 +90,10 @@ export default function Header() {
     {
       key: "about",
       children: [
-        { title: "BAN GIÁM ĐỐC HỌC VIỆN", href: "/gioi-thieu/ban-giam-doc-hoc-vien" },
+        { title: "BAN GIÁM ĐỐC PHÂN HIỆU", href: "/gioi-thieu/ban-giam-doc-phan-hieu" },
         { title: "GIỚI THIỆU CHUNG", href: "/gioi-thieu/gioi-thieu-chung" },
-        { title: "ĐƠN VỊ TRỰC THUỘC", href: "/gioi-thieu/don-vi-truc-thuoc" },
-        { title: "LÃNH ĐẠO HỌC VIỆN QUA CÁC THỜI KỲ", href: "/gioi-thieu/lanh-dao-hoc-vien-qua-cac-thoi-ky" },
+        { title: "ĐƠN VỊ THUỘC VÀ TRỰC THUỘC", href: "/gioi-thieu/don-vi-thuoc-va-truc-thuoc" },
         { title: "NHỮNG CHẶNG ĐƯỜNG PHÁT TRIỂN", href: "/gioi-thieu/nhung-chang-duong-phat-trien" },
-        { title: "NHỮNG PHẦN THƯỞNG VÀ DANH HIỆU CAO QUÝ", href: "/gioi-thieu/nhung-phan-thuong-va-danh-hieu-cao-quy" },
-        { title: "PHÁT BIỂU CỦA LÃNH ĐẠO ĐẢNG VÀ NHÀ NƯỚC VỚI HỌC VIỆN", href: "/gioi-thieu/phat-bieu-cua-lanh-dao-dang-va-nha-nuoc-voi-hoc-vien" },
-        { title: "PHÒNG TRUYỀN THỐNG SỐ", href: "/gioi-thieu/phong-truyen-thong-so" },
-        { title: "LOGO CHÍNH THỨC", href: "/gioi-thieu/logo-chinh-thuc" },
       ],
     },
     {
@@ -106,8 +101,7 @@ export default function Header() {
       children: [
         { title: "ĐÀO TẠO ĐẠI HỌC", href: "/dao-tao&boi-duong/dao-tao-dai-hoc" },
         { title: "ĐÀO TẠO THẠC SĨ", href: "/dao-tao&boi-duong/dao-tao-thac-si" },
-        { title: "ĐÀO TẠO TIẾN SĨ", href: "/dao-tao&boi-duong/dao-tao-tien-si" },
-        { title: "BA CÔNG KHAI", href: "/dao-tao&boi-duong/ba-cong-khai" },
+        { title: "ĐÀO TẠO BỒI DƯỠNG", href: "/dao-tao&boi-duong/dao-tao-boi-duong" },
       ],
     },
     {
