@@ -136,14 +136,11 @@ export default function Header() {
     {
       key: "news",
       children: [
-        { title: "LỊCH CÔNG TÁC", href: "/tin-tuc/lich-cong-tac" },
+        { title: "TIN TỨC", href: "/tin-tuc/tin-tuc" },
         { title: "THÔNG BÁO", href: "/tin-tuc/thong-bao" },
-        { title: "TUYÊN TRUYỀN PHỔ BIẾN PHÁP LUẬT", href: "/tin-tuc/tuyen-truyen-pho-bien-phap-luat" },
-        { title: "TIN HOẠT ĐỘNG", href: "/tin-tuc/tin-hoat-dong" },
-        { title: "THÔNG TIN HÀNH CHÍNH", href: "/tin-tuc/thong-tin-hanh-chinh" },
-        { title: "GÓP Ý DỰ THẢO CÁC VĂN KIỆN ĐH XIV CỦA ĐẢNG", href: "/tin-tuc/gop-y-du-thao-cac-van-kien-dh-xiv-cua-dang" },
-        { title: "CÔNG KHAI TÀI CHÍNH", href: "/tin-tuc/cong-khai-tai-chinh" },
-        { title: "BẦU CỬ ĐẠI BIỂU QUỐC HỘI KHÓA XVI VÀ ĐẠI BIỂU HĐND CÁC CẤP NHIỆM KỲ 2026-2031", href: "/tin-tuc/bau-cu-dai-bieu-quoc-hoi-khoa-xvi-va-dai-bieu-hdnd-cac-cap-nhiem-ky-2026-2031" },
+        { title: "LỊCH CÔNG TÁC", href: "/tin-tuc/lich-cong-tac" },
+        { title: "THỜI KHÓA BIỂU", href: "/tin-tuc/thoi-khoa-bieu" },
+        { title: "TUYÊN TRUYỀN PHÁP LUẬT", href: "/tin-tuc/tuyen-truyen-phap-luat" },
       ],
     },
     {

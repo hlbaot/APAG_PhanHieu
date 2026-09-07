@@ -25,14 +25,11 @@ const staticRoutes: { path: string; priority: number; changeFrequency: MetadataR
 
   // Tin tức
   { path: "tin-tuc",                                priority: 0.9, changeFrequency: "daily" },
-  { path: "tin-tuc/tin-hoat-dong",                  priority: 0.8, changeFrequency: "daily" },
+  { path: "tin-tuc/tin-tuc",                        priority: 0.8, changeFrequency: "daily" },
   { path: "tin-tuc/thong-bao",                      priority: 0.8, changeFrequency: "weekly" },
   { path: "tin-tuc/lich-cong-tac",                  priority: 0.7, changeFrequency: "weekly" },
-  { path: "tin-tuc/thong-tin-hanh-chinh",           priority: 0.7, changeFrequency: "weekly" },
-  { path: "tin-tuc/cong-khai-tai-chinh",            priority: 0.7, changeFrequency: "monthly" },
-  { path: "tin-tuc/tuyen-truyen-pho-bien-phap-luat", priority: 0.6, changeFrequency: "monthly" },
-  { path: "tin-tuc/gop-y-du-thao-cac-van-kien-dh-xiv-cua-dang",  priority: 0.6, changeFrequency: "monthly" },
-  { path: "tin-tuc/bau-cu-dai-bieu-quoc-hoi-khoa-xvi-va-dai-bieu-hdnd-cac-cap-nhiem-ky-2026-2031", priority: 0.6, changeFrequency: "monthly" },
+  { path: "tin-tuc/thoi-khoa-bieu",                 priority: 0.7, changeFrequency: "weekly" },
+  { path: "tin-tuc/tuyen-truyen-phap-luat",         priority: 0.6, changeFrequency: "monthly" },
 
   // Đào tạo & bồi dưỡng
   { path: "dao-tao&boi-duong",                    priority: 0.9, changeFrequency: "monthly" },

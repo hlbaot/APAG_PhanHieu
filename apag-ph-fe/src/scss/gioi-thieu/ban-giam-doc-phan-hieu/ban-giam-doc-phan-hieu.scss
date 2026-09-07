@@ -1,1 +1,19 @@
-// SCSS for gioi-thieu/ban-giam-doc-hoc-vien
+// SCSS for gioi-thieu/ban-giam-doc-phan-hieu
+
+@media print {
+  header,
+  footer,
+  aside,
+  button,
+  form {
+    display: none !important;
+  }
+
+  main {
+    width: 100% !important;
+    max-width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+}
