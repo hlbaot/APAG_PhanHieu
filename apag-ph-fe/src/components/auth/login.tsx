@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { User, Eye, EyeOff, RotateCw, Loader2, ArrowLeft } from "lucide-react";
+import { loginApi } from "@/api/API_Login";
 
 export default function LoginForm() {
   const [username, setUsername] = useState("");
@@ -13,16 +14,12 @@ export default function LoginForm() {
   const [captchaImageUrl, setCaptchaImageUrl] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   // Gọi API thật để lấy ảnh captcha mới
   const fetchCaptcha = async () => {
     setCaptchaInput("");
     try {
-      // TODO: gọi API GET /api/auth/captcha để lấy ảnh + token captcha
-      // const res = await fetch("/api/auth/captcha");
-      // const data = await res.json();
-      // setCaptchaImageUrl(data.imageUrl);
-
       // Tạm giữ chỗ — sẽ thay bằng URL từ API khi backend sẵn sàng
       setCaptchaImageUrl(null);
     } catch {
@@ -30,23 +27,28 @@ export default function LoginForm() {
     }
   };
 
-  // Gọi API đăng nhập thật
+  // Gọi API đăng nhập
   const handleLogin = async () => {
     setIsLoading(true);
     setErrorMessage(null);
+    setSuccessMessage(null);
     try {
-      // TODO: POST /api/auth/login với { username, password, captcha: captchaInput }
-      // const res = await fetch("/api/auth/login", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify({ username, password, captcha: captchaInput }),
-      // });
-      // if (!res.ok) {
-      //   const err = await res.json();
-      //   throw new Error(err.message || "Đăng nhập thất bại");
-      // }
-      // const data = await res.json();
-      // // xử lý token, redirect sau login thành công
+      const response = await loginApi({
+        username: username.trim(),
+        password: password,
+        captcha: captchaInput.trim(),
+      });
+
+      if (response.data?.accessToken) {
+        localStorage.setItem("accessToken", response.data.accessToken);
+        localStorage.setItem("user", JSON.stringify(response.data.user));
+        setSuccessMessage("Đăng nhập thành công!");
+        
+        // Chuyển hướng sau khi đăng nhập thành công
+        setTimeout(() => {
+          window.location.href = "/";
+        }, 1000);
+      }
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : "Đã có lỗi xảy ra. Vui lòng thử lại.";
       setErrorMessage(message);
@@ -67,10 +69,6 @@ export default function LoginForm() {
     }
     if (!password) {
       setErrorMessage("Vui lòng nhập mật khẩu.");
-      return;
-    }
-    if (!captchaInput.trim()) {
-      setErrorMessage("Vui lòng nhập mã xác nhận.");
       return;
     }
 
@@ -164,6 +162,13 @@ export default function LoginForm() {
           {errorMessage && (
             <div className="mb-4 px-4 py-2.5 rounded-md bg-red-50 border border-red-200 text-red-700 text-xs font-medium">
               {errorMessage}
+            </div>
+          )}
+
+          {/* Success message */}
+          {successMessage && (
+            <div className="mb-4 px-4 py-2.5 rounded-md bg-green-50 border border-green-200 text-green-700 text-xs font-medium">
+              {successMessage}
             </div>
           )}
 
